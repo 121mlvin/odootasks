@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="estate_tag_menu_action" name="Property Tags" parent="estate_type_menu_properties" action="estate_tag_actions"/>
+</odoo>
