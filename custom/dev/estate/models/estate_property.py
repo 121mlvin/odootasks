@@ -1,6 +1,7 @@
 from dateutil.relativedelta import relativedelta
 
 from odoo import fields, models, api
+from odoo.exceptions import UserError
 
 
 class EstateProperty(models.Model):
@@ -78,3 +79,14 @@ class EstateProperty(models.Model):
         else:
             self.garden_orientation = None
             self.garden_area = 0
+
+    def action_set_status_sold(self):
+        if self.state != 'canceled':
+            self.state = 'sold'
+        else:
+            raise UserError("A canceled property cannot be sold.")
+        return True
+
+    def action_set_status_canceled(self):
+        self.state = 'canceled'
+        return True
