@@ -5,10 +5,10 @@ from odoo.exceptions import UserError, ValidationError
 from odoo.tools.float_utils import float_compare, float_is_zero
 
 
-
 class EstateProperty(models.Model):
     _name = 'estate.property'
     _description = 'Estate Property Model'
+    _order = 'id desc'
 
     name = fields.Char(string='Name', required=True)
     description = fields.Text(string='Description')
