@@ -109,3 +109,16 @@ class EstateProperty(models.Model):
                     raise ValidationError(
                         "The selling price cannot be lower than 90% of the expected price."
                     )
+
+    @api.model
+    def create(self, vals):
+        print(vals)
+        rtn = super().create(vals)
+        print(rtn)
+        return rtn
+
+    @api.ondelete(at_uninstall=False)
+    def _check_state_before_delete(self):
+        for record in self:
+            if record.state not in ('new', 'canceled'):
+                raise UserError("You can only delete properties in 'New' or 'Canceled' state.")

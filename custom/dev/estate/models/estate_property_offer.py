@@ -58,3 +58,22 @@ class EstatePropertyOffer(models.Model):
     def action_refuse(self):
         for record in self:
             record.status = 'refused'
+
+    @api.model
+    def create(self, vals):
+        property_id = vals.get('property_id')
+        offer_price = vals.get('price')
+
+        if property_id and offer_price:
+            property_record = self.env['estate.property'].browse(property_id)
+
+            for existing_offer in property_record.offer_ids:
+                if existing_offer.price >= offer_price:
+                    raise UserError("An offer already exists with a higher or equal amount.")
+
+            new_offer = super().create(vals)
+            property_record.state = 'offer_received'
+            return new_offer
+
+        else:
+            raise UserError("Property and offer price must be specified.")

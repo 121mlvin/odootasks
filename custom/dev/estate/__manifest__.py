@@ -10,5 +10,6 @@
         'views/estate_tag_views.xml',
         'views/estate_tag_menus.xml',
         'views/estate_offer_views.xml',
+        'views/res_users_views.xml',
     ],
 }
