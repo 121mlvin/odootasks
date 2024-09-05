@@ -112,9 +112,7 @@ class EstateProperty(models.Model):
 
     @api.model
     def create(self, vals):
-        print(vals)
         rtn = super().create(vals)
-        print(rtn)
         return rtn
 
     @api.ondelete(at_uninstall=False)

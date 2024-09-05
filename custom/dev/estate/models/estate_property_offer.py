@@ -51,8 +51,13 @@ class EstatePropertyOffer(models.Model):
     def action_accept(self):
         if self.property_id.offer_ids.filtered(lambda o: o.status == 'accepted'):
             raise UserError("An offer has already been accepted for this property.")
+
+        if self.property_id.state in ['sold', 'canceled']:
+            raise UserError("You cannot accept an offer for a property that is already sold or canceled.")
+
         self.status = 'accepted'
         self.property_id.selling_price = self.price
+        self.property_id.state = "offer_accepted"
         self.property_id.buyer_id = self.partner_id
 
     def action_refuse(self):
