@@ -7,6 +7,6 @@ class Diagnosis(models.Model):
 
     doctor_id = fields.Many2one('hospital.doctor', string='Doctor', required=True)
     patient_id = fields.Many2one('hospital.patient', string='Patient', required=True)
-    # illness_id =
+    illness_id = fields.Many2one('hospital.illness', string='Illness', required=True)
     treatment = fields.Text(string='Treatment Prescribed')
     diagnosis_date = fields.Date(string='Diagnosis Date', required=True, default=fields.Date.today())

@@ -14,6 +14,7 @@
                 <group>
                     <field name="name"/>
                     <field name="specialty"/>
+                    <field name="gender"/>
                 </group>
             </form>
         </field>

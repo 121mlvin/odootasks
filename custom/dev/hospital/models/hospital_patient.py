@@ -5,13 +5,12 @@ from datetime import date
 class HospitalPatient(models.Model):
     _name = 'hospital.patient'
     _description = 'Patient Information'
+    _inherit = 'hospital.person'
 
-    name = fields.Char(string='Full Name', required=True)
-    gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string='Gender', required=True)
     date_of_birth = fields.Date(string='Date of Birth', required=True)
     age = fields.Integer(string='Age', compute='_compute_age', store=True)
     passport_info = fields.Char(string='Passport Details')
-    # contact_person_id =
+    contact_person_id = fields.Many2one('hospital.contact', string='Emergency Contact', required=True)
 
     @api.depends('date_of_birth')
     def _compute_age(self):

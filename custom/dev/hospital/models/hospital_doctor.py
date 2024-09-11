@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class Doctor(models.Model):
     _name = 'hospital.doctor'
+    _inherit = 'hospital.person'
     _description = 'Hospital Doctor'
 
     name = fields.Char(string='Full Name', required=True)

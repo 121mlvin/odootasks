@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_illness_type_form" model="ir.ui.view">
+        <field name="name">hospital.illness.type.form</field>
+        <field name="model">hospital.illness.type</field>
+        <field name="arch" type="xml">
+            <form string="Illness Type Form">
+                <group>
+                    <field name="name"/>
+                    <field name="parent_id"/>
+                    <field name="child_ids"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_illness_type_tree" model="ir.ui.view">
+        <field name="name">hospital.illness.type.tree</field>
+        <field name="model">hospital.illness.type</field>
+        <field name="arch" type="xml">
+            <tree string="Illness Types">
+                <field name="name"/>
+                <field name="parent_id"/>
+            </tree>
+        </field>
+    </record>
+    Form View:
+</odoo>

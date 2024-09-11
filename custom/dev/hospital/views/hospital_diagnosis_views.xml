@@ -14,7 +14,7 @@
                 <group>
                     <field name="doctor_id"/>
                     <field name="patient_id"/>
-                    <!--<field name="illness_id"/>-->
+                    <field name="illness_id"/>
                     <field name="treatment"/>
                     <field name="diagnosis_date"/>
                 </group>
@@ -30,7 +30,7 @@
             <tree string="Diagnosis List">
                 <field name="doctor_id"/>
                 <field name="patient_id"/>
-                <!--<field name="illness_id"/>-->
+                <field name="illness_id"/>
                 <field name="treatment"/>
                 <field name="diagnosis_date"/>
             </tree>

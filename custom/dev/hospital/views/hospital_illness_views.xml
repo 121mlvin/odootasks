@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_illness_list" model="ir.actions.act_window">
+        <field name="name">Illnesses</field>
+        <field name="res_model">hospital.illness</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_illness_form" model="ir.ui.view">
+        <field name="name">hospital.illness.form</field>
+        <field name="model">hospital.illness</field>
+        <field name="arch" type="xml">
+            <form string="Illness Form">
+                <group>
+                    <field name="name"/>
+                    <field name="type_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_illness_tree" model="ir.ui.view">
+        <field name="name">hospital.illness.tree</field>
+        <field name="model">hospital.illness</field>
+        <field name="arch" type="xml">
+            <tree string="Illness List">
+                <field name="name"/>
+                <field name="type_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
