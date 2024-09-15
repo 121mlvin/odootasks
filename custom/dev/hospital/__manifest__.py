@@ -9,7 +9,7 @@
         'views/hospital_doctor_menus.xml',
         'views/hospital_diagnosis_views.xml',
         'views/hospital_diagnosis_menus.xml',
-        'views/hospital_contact_views.xml',  # menus?
+        'views/hospital_contact_views.xml',
         'views/hospital_illness_views.xml',
         'views/hospital_illness_menus.xml',
         'views/hospital_illness_type_views.xml',
@@ -25,5 +25,12 @@
         'views/hospital_sample_type_menus.xml',
         'views/hospital_doctor_schedule_views.xml',
         'views/hospital_doctor_schedule_menus.xml',
+        'wizard/hospital_reassign_doctor_views.xml',
+        'wizard/hospital_reassign_doctor_menus.xml',
+        'wizard/hospital_reschedule_appointment_views.xml',
+        'wizard/hospital_reschedule_appointment_menus.xml',
+        'wizard/hospital_doctor_weekly_schedule_views.xml',
+        'wizard/hospital_doctor_weekly_schedule_menus.xml',
+
     ],
 }

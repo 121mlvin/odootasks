@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<menuitem id="menu_reschedule_appointment"
+          name="Reschedule Appointment"
+          parent="menu_hospital_root"
+          action="action_reschedule_appointment"/>
+
+</odoo>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<menuitem id="menu_reassign_personal_doctor" name="Reassign Personal Doctor" parent="menu_hospital_root" action="action_reassign_personal_doctor"/>
+
+</odoo>

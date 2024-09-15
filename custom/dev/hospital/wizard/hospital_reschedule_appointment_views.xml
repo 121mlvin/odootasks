@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_reschedule_appointment" model="ir.actions.act_window">
+        <field name="name">Reschedule Appointment</field>
+        <field name="res_model">hospital.reschedule.appointment.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+    <record id="reschedule_appointment_wizard_form" model="ir.ui.view">
+        <field name="name">hospital.reschedule.appointment.wizard.form</field>
+        <field name="model">hospital.reschedule.appointment.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reschedule Appointment">
+                <group>
+                    <field name="visit_id"/>
+                    <field name="new_appointment_date"/>
+                    <field name="new_doctor_id"/>
+                </group>
+                <footer>
+                    <button string="Reschedule" type="object" name="action_reschedule_appointment" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

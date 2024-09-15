@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<menuitem id="menu_doctor_weekly_schedule"
+          name="Doctor Weekly Schedule"
+          parent="menu_hospital_root"
+          action="action_doctor_weekly_schedule"/>
+
+</odoo>
