@@ -15,6 +15,7 @@
                     <field name="doctor_id"/>
                     <field name="patient_id"/>
                     <field name="appointment_date"/>
+                    <field name="appointment_completed"/>
                     <field name="diagnosis_id"/>
                     <field name="recommendations"/>
                 </group>

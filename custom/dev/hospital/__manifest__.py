@@ -23,5 +23,7 @@
         'views/hospital_research_type_menus.xml',
         'views/hospital_sample_type_views.xml',
         'views/hospital_sample_type_menus.xml',
+        'views/hospital_doctor_schedule_views.xml',
+        'views/hospital_doctor_schedule_menus.xml',
     ],
 }

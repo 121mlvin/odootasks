@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="menu_hospital_doctor_schedule" name="Doctors Schedule" parent="menu_hospital_root" action="action_doctor_schedule_list"/>
+</odoo>
