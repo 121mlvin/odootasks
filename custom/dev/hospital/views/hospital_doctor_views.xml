@@ -15,6 +15,8 @@
                     <field name="name"/>
                     <field name="specialty"/>
                     <field name="gender"/>
+                    <field name="is_intern"/>
+                    <field name="mentor_id" invisible="not is_intern"/>
                 </group>
             </form>
         </field>

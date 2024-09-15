@@ -17,6 +17,7 @@
                     <field name="illness_id"/>
                     <field name="treatment"/>
                     <field name="diagnosis_date"/>
+                    <field name="mentor_comment"/>
                 </group>
             </form>
         </field>
