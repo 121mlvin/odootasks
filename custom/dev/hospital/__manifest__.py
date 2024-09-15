@@ -31,6 +31,10 @@
         'wizard/hospital_reschedule_appointment_menus.xml',
         'wizard/hospital_doctor_weekly_schedule_views.xml',
         'wizard/hospital_doctor_weekly_schedule_menus.xml',
+        'wizard/hospital_disease_report_views.xml',
+        'wizard/hospital_disease_report_menus.xml',
+        'wizard/disease_report_views.xml',
+        'wizard/disease_report_menus.xml'
 
     ],
 }

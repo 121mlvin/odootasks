@@ -11,6 +11,9 @@
         <field name="model">hospital.doctor</field>
         <field name="arch" type="xml">
             <form string="Doctor Form">
+                <header>
+                    <button name="%(action_disease_report_wizard)d" string="Print Disease Report" type="action" icon="fa-print"/>
+                </header>
                 <group>
                     <field name="name"/>
                     <field name="specialty"/>

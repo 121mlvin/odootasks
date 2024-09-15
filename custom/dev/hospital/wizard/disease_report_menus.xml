@@ -1,0 +1,5 @@
+<odoo>
+
+    <menuitem id="menu_disease_report" name="Disease Report Results"
+              parent="menu_hospital_reports_root" action="action_disease_report"/>
+</odoo>

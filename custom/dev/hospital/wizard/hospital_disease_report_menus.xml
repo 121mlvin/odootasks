@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="menu_hospital_reports_root" name="Reports" parent="menu_hospital_root"/>
+
+    <menuitem id="menu_disease_report_wizard" name="Disease Report" parent="menu_hospital_reports_root"
+              action="action_disease_report_wizard"/>
+</odoo>
