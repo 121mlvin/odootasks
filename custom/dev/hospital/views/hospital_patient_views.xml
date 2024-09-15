@@ -18,6 +18,7 @@
                     <field name="age" readonly="1"/>
                     <field name="passport_info"/>
                     <field name="contact_person_id"/>
+                    <field name="personal_doctor_id"/>
                 </group>
             </form>
         </field>

@@ -11,6 +11,7 @@ class HospitalPatient(models.Model):
     age = fields.Integer(string='Age', compute='_compute_age', store=True)
     passport_info = fields.Char(string='Passport Details')
     contact_person_id = fields.Many2one('hospital.contact', string='Emergency Contact', required=True)
+    personal_doctor_id = fields.Many2one('hospital.doctor', string='Personal Doctor')
 
     @api.depends('date_of_birth')
     def _compute_age(self):
@@ -23,3 +24,23 @@ class HospitalPatient(models.Model):
                 patient.age = age_in_years if has_birthday_passed else age_in_years - 1
             else:
                 patient.age = 0
+
+    @api.model
+    def create(self, vals):
+        patient = super(HospitalPatient, self).create(vals)
+        if vals.get('personal_doctor_id'):
+            self.env['hospital.doctor.history'].create({
+                'patient_id': patient.id,
+                'doctor_id': vals.get('personal_doctor_id'),
+            })
+        return patient
+
+    def write(self, vals):
+        result = super(HospitalPatient, self).write(vals)
+        if vals.get('personal_doctor_id'):
+            for patient in self:
+                self.env['hospital.doctor.history'].create({
+                    'patient_id': patient.id,
+                    'doctor_id': vals.get('personal_doctor_id'),
+                })
+        return result
