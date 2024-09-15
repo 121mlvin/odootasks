@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_research_list" model="ir.actions.act_window">
+        <field name="name">Research</field>
+        <field name="res_model">hospital.research</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_research_form" model="ir.ui.view">
+        <field name="name">hospital.research.form</field>
+        <field name="model">hospital.research</field>
+        <field name="arch" type="xml">
+            <form string="Research">
+                <group>
+                    <field name="patient_id"/>
+                    <field name="doctor_id"/>
+                    <field name="research_type_id"/>
+                    <field name="sample_id"/>
+                    <field name="conclusions"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_research_tree" model="ir.ui.view">
+        <field name="name">hospital.research.tree</field>
+        <field name="model">hospital.research</field>
+        <field name="arch" type="xml">
+            <tree string="Researches">
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="research_type_id"/>
+                <field name="sample_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

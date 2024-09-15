@@ -7,3 +7,6 @@ hospital.access_hospital_illness,access_hospital_illness,hospital.model_hospital
 hospital.access_hospital_illness_type,access_hospital_illness_type,hospital.model_hospital_illness_type,base.group_user,1,1,1,1
 hospital.access_hospital_visit,access_hospital_visit,hospital.model_hospital_visit,base.group_user,1,1,1,1
 hospital.access_hospital_doctor_history,access_hospital_doctor_history,hospital.model_hospital_doctor_history,base.group_user,1,1,1,1
+hospital.access_hospital_research,access_hospital_research,hospital.model_hospital_research,base.group_user,1,1,1,1
+hospital.access_hospital_research_type,access_hospital_research_type,hospital.model_hospital_research_type,base.group_user,1,1,1,1
+hospital.access_hospital_sample_type,access_hospital_sample_type,hospital.model_hospital_sample_type,base.group_user,1,1,1,1

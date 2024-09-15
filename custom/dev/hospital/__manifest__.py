@@ -17,5 +17,11 @@
         'views/hospital_visit_menus.xml',
         'views/hospital_doctor_history_views.xml',
         'views/hospital_doctor_history_menus.xml',
+        'views/hospital_research_views.xml',
+        'views/hospital_research_menus.xml',
+        'views/hospital_research_type_views.xml',
+        'views/hospital_research_type_menus.xml',
+        'views/hospital_sample_type_views.xml',
+        'views/hospital_sample_type_menus.xml',
     ],
 }

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="hospital_menu_researches" name="Researches" parent="menu_hospital_root"/>
+    <menuitem id="menu_hospital_research" name="Research" parent="hospital_menu_researches" action="action_research_list"/>
+</odoo>
