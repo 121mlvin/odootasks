@@ -12,6 +12,7 @@ class Diagnosis(models.Model):
     treatment = fields.Text(string='Treatment Prescribed')
     diagnosis_date = fields.Date(string='Diagnosis Date', required=True, default=fields.Date.today())
     mentor_comment = fields.Text(string='Mentor Comment')
+    research_ids = fields.One2many('hospital.research', 'diagnosis_id', string='Researches')
 
     @api.constrains('doctor_id', 'mentor_comment')
     def _check_mentor_comment(self):

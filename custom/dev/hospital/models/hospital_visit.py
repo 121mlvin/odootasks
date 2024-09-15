@@ -10,3 +10,4 @@ class DoctorVisit(models.Model):
     appointment_date = fields.Datetime(string='Appointment Date', required=True)
     diagnosis_id = fields.Many2one('hospital.diagnosis', string='Diagnosis')
     recommendations = fields.Text(string='Recommendations')
+    research_ids = fields.One2many('hospital.research', 'visit_id', string='Researches')

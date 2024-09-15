@@ -10,3 +10,5 @@ class Research(models.Model):
     research_type_id = fields.Many2one('hospital.research.type', string='Research Type', required=True)
     sample_id = fields.Many2one('hospital.sample.type', string='Sample Type', required=True)
     conclusions = fields.Text(string='Conclusions')
+    visit_id = fields.Many2one('hospital.visit', string='Doctor Visit', required=True)
+    diagnosis_id = fields.Many2one('hospital.diagnosis', string='Diagnosis')
